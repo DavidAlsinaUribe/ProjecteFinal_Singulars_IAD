@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="perspective: 800px" class="flex items-center justify-center h-screen" x-data="setup()">
+        <div class="m-0.5">
+          <div
+            x-ref="card"
+            @mousemove="handleMouseMove($event, $refs.card)"
+            @mouseenter="handleMouseEnter($event, $refs.card)"
+            @mouseleave="handleMouseLeave($event, $refs.card)"
+            class="relative overflow-hidden bg-gray-800 rounded-lg w-72 h-96"
+            style="
+              box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+                inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+              transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            "
+          >
+            <div
+              x-ref="cardBG"
+              class="absolute bg-center bg-no-repeat bg-cover -inset-3"
+              @mousemove="cardBgTransform($event, $refs.cardBG)"
+              style="
+                background-image: url(https://avatars0.githubusercontent.com/u/57622665?s=460&u=8f581f4c4acd4c18c33a87b3e6476112325e8b38&v=4);
+                transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+              "
+            >
+              <div
+                class="w-full h-full transition-all duration-300 bg-black"
+                :class="{'opacity-40': !isHovering, 'opacity-0': isHovering}"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
