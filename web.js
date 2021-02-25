@@ -3,27 +3,32 @@
 /* LightBox -> Tarjetes presentació
 ------------------------------------------------------ */
 
-// var obrir = document.querySelector('#obrir')
-// var tancar = document.querySelector('#tancar')
-// var lightbox= document.querySelector('#lightbox')
-// var blackOverlay = document.querySelector('#blackOverlay')
+var obrir = document.querySelector('#obrir')
+var tancar = document.querySelector('#tancar')
+var lightbox= document.querySelector('#lightbox')
+var blackOverlay = document.querySelector('#blackOverlay')
 
-// obrir.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     blackOverlay.style.display = "block"
-// })
+obrir.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    blackOverlay.style.display = "block"
+})
+obrir2.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    blackOverlay.style.display = "block"
+})
 
-// tancar.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     blackOverlay.style.display = "none"
-// })
+tancar.addEventListener("click", (e) => {
+    e.preventDefault();
+    blackOverlay.style.display = "none"
+})
 
-// window.addEventListener("click", (e) => {
-//     if (!lightbox.contains(e.target)){
-//         blackOverlay.style.display = "block"
-//     }
-// })
+window.addEventListener("click", (e) => {
+    if (!lightbox.contains(e.target)){
+        blackOverlay.style.display = "none"
+    }
+})
 
 /*----------------------------------------------------*/
 /* Parallax -> Moviment LEGOS
