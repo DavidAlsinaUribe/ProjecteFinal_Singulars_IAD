@@ -14,7 +14,7 @@
     <main class="col-md-8">
       <!-- something -->
       <h2>Test List:</h2>
-      <ul id="test1">
+      <ul id="itemList">
         <!-- Add list elements here -->
       </ul>
       <button onclick="renderList()">Update List</button>
@@ -44,16 +44,16 @@
           // You may call listAll() recursively on them.
         });
         res.items.forEach(function(itemRef) {
-          var outputList = document.getElementById("test1");
+          var outputList = document.getElementById("itemList");
           if (outputList.innerHTML != "") {
             outputList.innerHTML = "";
           }
           itemRef.getDownloadURL().then(function(url) {
             itemRef.getMetadata().then(function(metadata) {
               if (metadata.contentType.includes("image")) {
-                outputList.innerHTML = outputList.innerHTML + `<li><a href="${url}"><img src="${url}"> ${itemRef.name} </a><button onclick="deleteFile(${itemRef.name})">Delete File</button></li>`;
+                outputList.innerHTML = outputList.innerHTML + `<li><a href="${url}"><img src="${url}"> ${itemRef.name} </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
               } else {
-                outputList.innerHTML = outputList.innerHTML + `<li><a href="${url}"><img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/document-icon.png" width="100" height="auto"> ${itemRef.name} </a><button onclick="deleteFile(${itemRef.name})">Delete File</button></li>`;
+                outputList.innerHTML = outputList.innerHTML + `<li><a href="${url}"><img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/document-icon.png" width="100" height="auto"> ${itemRef.name} </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
               }
             }).catch(function(error) {
               console.log(error);
@@ -116,14 +116,14 @@
       // Delete the file
       deleteRef.delete().then(function() {
         renderList();
-        var outputList = document.getElementById("test1");
+        var outputList = document.getElementById("itemList");
         outputList.innerHTML = outputList.innerHTML + `<li style="color: red">Successfully deleted file: ${name}</li>`;
       }).catch(function(error) {
         console.log(error);
       });
       
     }
-
+    
     // Your web app's Firebase configuration
     var firebaseConfig = {
       apiKey: "AIzaSyDhttbsgfX6dBU_HbmxrTV_qLU6ttCKkL4",
