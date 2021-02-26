@@ -66,6 +66,14 @@ body {
 	padding: 0 20px;
 	box-sizing: border-box;
 }
+.container-team {
+	position: relative;
+	width: 100vw;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
 .column, .columns {
 	width: 100%;
 	float: left;
@@ -232,7 +240,7 @@ h6 {
 		font-size: 3.6rem;
 	}
 	h4 {
-		font-size: 3.0rem;
+		font-size: 2.8rem;
 	}
 	h5 {
 		font-size: 2.4rem;
@@ -327,13 +335,16 @@ header {
 	background-color: rgba(0, 0, 0, 0.582);
 }
 #lightbox{
+	z-index: 1;
 	width: 75%;
 	height: fit-content;
 	padding: 0 30px 30px 30px;
 	border: 5px solid rgb(255, 208, 0);
 	border-radius: 5px;
-	background-color: rgb(255, 255, 255);
-	margin: 300px auto;
+	background-color: rgb(255, 208, 0);
+	margin: 1em auto ;
+	/* box-shadow: 5px 5px rgb(139, 114, 0); */
+	
 	
 }
 .cartaFlex{
@@ -577,6 +588,12 @@ header {
 		width: 100%;
 		margin-top: 5px;
 	}
+	.lightbox-cont{
+		display: block;
+	}
+	/* .cartaFlex{
+		display: block;
+	} */
 	
 	@media only screen and (max-width: 766px) {
 		nav {
@@ -596,6 +613,7 @@ header {
 			text-align: center;
 			width: 100%;
 		}
+		
 	}
 	nav ul li {
 		display: inline-block;
@@ -616,6 +634,7 @@ header {
 		nav ul li:first-child {
 			margin-top: 70px;
 		}
+		
 	}
 	nav ul a {
 		text-transform: uppercase;
@@ -639,13 +658,16 @@ header {
 	}
 	
 	@media only screen and (max-width: 766px) {
-		
+		.row{
+			display: block;
+			text-align: center;
+		}
 		.title {
 	
-			padding: 5rem;
-			width: fit-content;
+			padding: 5rem 0;
+			/* width: fit-content;
 			text-align: center;
-			width: max-content;
+			width: max-content; */
 			margin: auto;
 		}
 		.logo{
@@ -663,7 +685,7 @@ header {
 			width: 300px;
 			position: relative;
 			top:-100px;
-			left: -160px;
+			left: -167px;
 			z-index:0;
 		}
 		/* .legos{
@@ -675,6 +697,14 @@ header {
 			
 			
 			
+		} */
+		.cartaFlex{
+			display: block;
+			
+		}	
+		/* .img-small{
+			text-align: center;
+			margin: auto;
 		} */
 		.mobile-toggle {
 			display: block;
