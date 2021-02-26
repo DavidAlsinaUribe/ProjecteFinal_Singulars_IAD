@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Store Page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <main class="col-md-8">
+      <!-- something -->
+      <h2>Test List:</h2>
+      <ul id="itemList">
+        <!-- Add list elements here -->
+      </ul>
+      <button onclick="renderList()">Update List</button>
+      <button onclick="uploadFile()">Upload File</button>
+    </main>
+  </div>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+  
+  <script>
+    function renderList() {
+      // Find all the prefixes and items.
+      listRef.listAll().then(function(res) {
+        res.prefixes.forEach(function(folderRef) {
+          // All the prefixes under listRef.
+          // You may call listAll() recursively on them.
+        });
+        res.items.forEach(function(itemRef) {
+          var outputList = document.getElementById("itemList");
+          if (outputList.innerHTML != "") {
+            outputList.innerHTML = "";
+          }
+          itemRef.getDownloadURL().then(function(url) {
+            itemRef.getMetadata().then(function(metadata) {
+              if (metadata.contentType.includes("image")) {
+                outputList.innerHTML = outputList.innerHTML + `<li><img src="${url}"> ${itemRef.name} <a class="dowloadLink" href="" download="${url}"> Download File </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
+              } else {
+                outputList.innerHTML = outputList.innerHTML + `<li><img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/document-icon.png" width="100" height="auto"> ${itemRef.name} <a class="dowloadLink" href="" download="${url}"> Download File </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
+              }
+            }).catch(function(error) {
+              console.log(error);
+            });
+          }).catch(function(error) {
+            console.log(error);
+          })
+        });
+      }).catch(function(error) {
+        console.log(error);
+      });
+    }
+    
+    function uploadFile() {
+      var input = document.createElement('input');
+      input.type = 'file';
+      
+      //Upload function
+      input.onchange = e => { 
+        var file = e.target.files[0]; 
+        
+        // Create the file metadata
+        var metadata = {
+          contentType: file.type
+        };
+        
+        // Upload file and metadata to the object 'images/mountains.jpg'
+        var uploadTask = listRef.child(file.name).put(file, metadata);
+        
+        // Listen for state changes, errors, and completion of the upload.
+        uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+        function(snapshot) {
+          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+          var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log('Upload is ' + progress + '% done');
+          switch (snapshot.state) {
+            case firebase.storage.TaskState.PAUSED: // or 'paused'
+            console.log('Upload is paused');
+            break;
+            case firebase.storage.TaskState.RUNNING: // or 'running'
+            console.log('Upload is running');
+            break;
+          }
+        }, function(error) {
+          console.log(error);
+        }, function() {
+          renderList();
+        });
+        
+      }
+      
+      //Trigger upload function upon clicking the button
+      input.click();
+    }
+    
+    function deleteFile(name) {
+      // Create a reference to the file to delete
+      var deleteRef = listRef.child(name);
+      
+      // Delete the file
+      deleteRef.delete().then(function() {
+        renderList();
+        var outputList = document.getElementById("itemList");
+        outputList.innerHTML = outputList.innerHTML + `<li style="color: red">Successfully deleted file: ${name}</li>`;
+      }).catch(function(error) {
+        console.log(error);
+      });
+      
+    }
+    
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDhttbsgfX6dBU_HbmxrTV_qLU6ttCKkL4",
+      authDomain: "alex-singulars-2020-test.firebaseapp.com",
+      projectId: "alex-singulars-2020-test",
+      storageBucket: "alex-singulars-2020-test.appspot.com",
+      messagingSenderId: "603380152330",
+      appId: "1:603380152330:web:d47ea6ed275a56b88c87f3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    // Points to the root reference
+    var storageRef = firebase.storage().ref();
+    
+    // Create a reference under which you want to list
+    var listRef = storageRef.child('Test Files');
+    
+    //Render the list for the first time
+    renderList();
+    
+  </script>
+</body>
+</html>
