@@ -51,9 +51,9 @@
           itemRef.getDownloadURL().then(function(url) {
             itemRef.getMetadata().then(function(metadata) {
               if (metadata.contentType.includes("image")) {
-                outputList.innerHTML = outputList.innerHTML + `<li><a href="${url}"><img src="${url}"> ${itemRef.name} </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
+                outputList.innerHTML = outputList.innerHTML + `<li><img src="${url}"> ${itemRef.name} <a class="dowloadLink" href="" download="${url}"> Download File </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
               } else {
-                outputList.innerHTML = outputList.innerHTML + `<li><a href="${url}"><img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/document-icon.png" width="100" height="auto"> ${itemRef.name} </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
+                outputList.innerHTML = outputList.innerHTML + `<li><img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/document-icon.png" width="100" height="auto"> ${itemRef.name} <a class="dowloadLink" href="" download="${url}"> Download File </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
               }
             }).catch(function(error) {
               console.log(error);
