@@ -146,12 +146,12 @@ h6 {
 }
 
 .shop-items {
-  margin-top: 3rem;
+  margin-top: 6rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-template-rows: repeat(2, minmax(360px, 1fr));
-  gap: 3rem;
-  grid-gap: 3rem;
+  gap: 6rem;
+  grid-gap: 6rem;
   grid-auto-rows: 360px;
 }
 
@@ -323,4 +323,29 @@ h6 {
   .slide .description {
     width: 100%;
   }
+}
+
+/* Download & Delete Buttons CSS */
+.downloadButton {
+  margin: 10px auto;
+  padding: 10px 0;
+  width: 200px;
+}
+
+.downloadButton a {
+  background: #e25734;
+  color: #fff;
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  font-family:'Arial',Verdana,sans-serif;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  position: relative;
+  z-index: 2;
+  transition: 350ms;
 }

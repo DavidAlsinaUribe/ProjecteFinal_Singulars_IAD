@@ -9,6 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./shop-style.css">
+  <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'/>
   
 </head>
 <body>
@@ -47,7 +48,7 @@
     <!-- / .banner -->
     
     <section id="item-list" class="shop-items"></section>
-
+    
     <section id="bottom-buttons">
       <button onclick="renderList()">Update List</button>
       <button onclick="uploadFile()">Upload File</button>
@@ -148,7 +149,9 @@
                     <h3><a href="${url}" target="_blank">${itemRef.name.substring(0, itemRef.name.lastIndexOf('.'))}</a></h3>
                   </div>
                   <div class="price">
-                    <a class="dowloadLink" href="" download="${url}"> Download File </a>
+                    <div class="downloadButton">
+                      <a href="${url}" download="${url}" target="_blank">Download File</a>
+                    </div>
                     <button onclick="deleteFile('${itemRef.name}')">Delete File</button>
                   </div>
                 </div>`;
@@ -166,7 +169,9 @@
                     <h3><a href="${url}" target="_blank">${itemRef.name.substring(0, itemRef.name.lastIndexOf('.'))}</a></h3>
                   </div>
                   <div class="price">
-                    <a class="dowloadLink" href="" download="${url}"> Download File </a>
+                    <div class="downloadButton">
+                      <a href="${url}" download="${url}" target="_blank">Download File</a>
+                    </div>
                     <button onclick="deleteFile('${itemRef.name}')">Delete File</button>
                   </div>
                 </div>`;
@@ -232,23 +237,25 @@
       // Delete the file
       if (confirm("Are you sure you want to delete it?")) {
         deleteRef.delete().then(function() {
-        renderList();
-        var outputList = document.getElementById("itemList");
-        console.log(`Successfully deleted file: ${name}</li>`);
-      }).catch(function(error) {
-        console.log(error);
-      });
+          renderList();
+          var outputList = document.getElementById("itemList");
+          console.log(`Successfully deleted file: ${name}</li>`);
+        }).catch(function(error) {
+          console.log(error);
+        });
       }
     }
     
     // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     var firebaseConfig = {
-      apiKey: "AIzaSyDhttbsgfX6dBU_HbmxrTV_qLU6ttCKkL4",
-      authDomain: "alex-singulars-2020-test.firebaseapp.com",
-      projectId: "alex-singulars-2020-test",
-      storageBucket: "alex-singulars-2020-test.appspot.com",
-      messagingSenderId: "603380152330",
-      appId: "1:603380152330:web:d47ea6ed275a56b88c87f3"
+      apiKey: "AIzaSyDgCuXh5WA5tuPE2Ri5IoNsVjTPwZczfMk",
+      authDomain: "singulars-2020-projecte-iad.firebaseapp.com",
+      projectId: "singulars-2020-projecte-iad",
+      storageBucket: "singulars-2020-projecte-iad.appspot.com",
+      messagingSenderId: "185830163445",
+      appId: "1:185830163445:web:05ed47c4d699ac003856bc",
+      measurementId: "G-9390G1QHKF"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
