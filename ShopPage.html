@@ -145,7 +145,7 @@
                     <img src="${url}" width="160" height="160">
                   </a>
                   <div class="title">
-                    <h3><a href="${url}">${itemRef.name.substring(0, itemRef.name.lastIndexOf('.'))}</a></h3>
+                    <h3><a href="${url}" target="_blank">${itemRef.name.substring(0, itemRef.name.lastIndexOf('.'))}</a></h3>
                   </div>
                   <div class="price">
                     <a class="dowloadLink" href="" download="${url}"> Download File </a>
@@ -163,7 +163,7 @@
                     <img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/document-icon.png" width="160" height="160">
                   </a>
                   <div class="title">
-                    <h3><a href="${url}">${itemRef.name.substring(0, itemRef.name.lastIndexOf('.'))}</a></h3>
+                    <h3><a href="${url}" target="_blank">${itemRef.name.substring(0, itemRef.name.lastIndexOf('.'))}</a></h3>
                   </div>
                   <div class="price">
                     <a class="dowloadLink" href="" download="${url}"> Download File </a>
@@ -230,14 +230,15 @@
       var deleteRef = listRef.child(name);
       
       // Delete the file
-      deleteRef.delete().then(function() {
+      if (confirm("Are you sure you want to delete it?")) {
+        deleteRef.delete().then(function() {
         renderList();
         var outputList = document.getElementById("itemList");
         console.log(`Successfully deleted file: ${name}</li>`);
       }).catch(function(error) {
         console.log(error);
       });
-      
+      }
     }
     
     // Your web app's Firebase configuration
