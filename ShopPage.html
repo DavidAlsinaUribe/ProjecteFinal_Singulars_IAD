@@ -1,26 +1,109 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Store Page</title>
+  <title>Premium Shop</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./shop-style.css">
+  
 </head>
 <body>
   <div class="container">
+    <header class="topnav">
+      <div class="topnav--subsection">
+        
+        <!-- / .menu -->
+        
+        <nav class="branding">
+          <a href="#">eshop</a>
+        </nav>
+        <!-- / .branding -->
+        
+        <nav class="user-engagement">
+          <a href="#">Profile</a>
+          <a href="#">Cart</a>
+          <a href="#">Contact us</a>
+        </nav>
+        <!-- / .user-engagement -->
+        <a class="icon" href="#"></a>
+      </div>
+      
+    </header>
+    <!-- / .topnav -->
+    
+    <section class="banner">
+      <div class="slide">
+        <div class="description">
+          <h1>Premium Textures</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque deleniti similique fugit expedita commodi, consectetur, eligendi.</p>
+        </div>
+        <img src="https://user-images.githubusercontent.com/52452/42075807-a4f568fc-7b40-11e8-8024-d4183c805a69.png" width="350" height="350">
+      </div>
+    </section>
+    <!-- / .banner -->
+    
+    <section id="item-list" class="shop-items"></section>
+
+    <section id="bottom-buttons">
+      <button onclick="renderList()">Update List</button>
+      <button onclick="uploadFile()">Upload File</button>
+    </section>
+    
+    <footer class="main-footer">
+      <nav>
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Help & Contact Us</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Online Stores</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Help & Contact Us</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Online Stores</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Help & Contact Us</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Online Stores</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Help & Contact Us</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Online Stores</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </nav>
+    </footer>
+    
+  </div>
+  <!-- / .container -->
+  <!-- partial -->
+  
+  <!-- <div class="container">
     <main class="col-md-8">
-      <!-- something -->
       <h2>Test List:</h2>
-      <ul id="itemList">
-        <!-- Add list elements here -->
-      </ul>
+      <ul id="itemList"></ul>
       <button onclick="renderList()">Update List</button>
       <button onclick="uploadFile()">Upload File</button>
     </main>
-  </div>
+  </div> -->
   
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -37,6 +120,7 @@
   
   <script>
     function renderList() {
+      console.log("Render called!");
       // Find all the prefixes and items.
       listRef.listAll().then(function(res) {
         res.prefixes.forEach(function(folderRef) {
@@ -44,16 +128,48 @@
           // You may call listAll() recursively on them.
         });
         res.items.forEach(function(itemRef) {
-          var outputList = document.getElementById("itemList");
+          var outputList = document.getElementById("item-list");
           if (outputList.innerHTML != "") {
             outputList.innerHTML = "";
           }
           itemRef.getDownloadURL().then(function(url) {
             itemRef.getMetadata().then(function(metadata) {
               if (metadata.contentType.includes("image")) {
-                outputList.innerHTML = outputList.innerHTML + `<li><img src="${url}"> ${itemRef.name} <a class="dowloadLink" href="" download="${url}"> Download File </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
+                outputList.innerHTML = outputList.innerHTML + 
+                `<div class="shop-item">
+                  <a href="#" class="shop-item--container">
+                    <div class="meta">
+                      <span class="tag">new</span>
+                      <span class="discount">FLAT MAPS - 2X2 METERS</span>
+                    </div>
+                    <img src="${url}" width="160" height="160">
+                  </a>
+                  <div class="title">
+                    <h3><a href="${url}">${itemRef.name.substring(0, itemRef.name.lastIndexOf('.'))}</a></h3>
+                  </div>
+                  <div class="price">
+                    <a class="dowloadLink" href="" download="${url}"> Download File </a>
+                    <button onclick="deleteFile('${itemRef.name}')">Delete File</button>
+                  </div>
+                </div>`;
               } else {
-                outputList.innerHTML = outputList.innerHTML + `<li><img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/document-icon.png" width="100" height="auto"> ${itemRef.name} <a class="dowloadLink" href="" download="${url}"> Download File </a><button onclick="deleteFile('${itemRef.name}')">Delete File</button></li>`;
+                outputList.innerHTML = outputList.innerHTML + 
+                `<div class="shop-item">
+                  <a href="#" class="shop-item--container">
+                    <div class="meta">
+                      <span class="tag">new</span>
+                      <span class="discount">ROYALTY-FREE FILES</span>
+                    </div>
+                    <img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/document-icon.png" width="160" height="160">
+                  </a>
+                  <div class="title">
+                    <h3><a href="${url}">${itemRef.name.substring(0, itemRef.name.lastIndexOf('.'))}</a></h3>
+                  </div>
+                  <div class="price">
+                    <a class="dowloadLink" href="" download="${url}"> Download File </a>
+                    <button onclick="deleteFile('${itemRef.name}')">Delete File</button>
+                  </div>
+                </div>`;
               }
             }).catch(function(error) {
               console.log(error);
@@ -117,7 +233,7 @@
       deleteRef.delete().then(function() {
         renderList();
         var outputList = document.getElementById("itemList");
-        outputList.innerHTML = outputList.innerHTML + `<li style="color: red">Successfully deleted file: ${name}</li>`;
+        console.log(`Successfully deleted file: ${name}</li>`);
       }).catch(function(error) {
         console.log(error);
       });
@@ -140,7 +256,7 @@
     var storageRef = firebase.storage().ref();
     
     // Create a reference under which you want to list
-    var listRef = storageRef.child('Test Files');
+    var listRef = storageRef.child('E-SHOP Files');
     
     //Render the list for the first time
     renderList();
