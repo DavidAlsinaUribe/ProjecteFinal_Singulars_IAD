@@ -101,19 +101,19 @@ contingutPerfils = {
                 <h4 style="margin-left:.5em;text-align:left"> <span class="demi">Skills</span> </h4>
                     <div class="targetes">
                         <ul style="margin-left:2em; margin-right:2em">
-                            <li> -Revit </li>
-                            <li> -3D Max </li>
-                            <li> -AutoCad </li>
+                            <li> Revit </li>
+                            <li> 3D Max </li>
+                            <li> AutoCad </li>
                         </ul>
                         <ul style="margin-left:2em; margin-right:2em">
-                            <li> -Photoshop </li>
-                            <li> -Illustrator </li>
-                            <li> -InDesign </li>
+                            <li> Photoshop </li>
+                            <li> Illustrator </li>
+                            <li> InDesign </li>
                         </ul>
                         <ul style="margin-left:2em; margin-right:2em">
-                            <li> -Quixer Mixer </li>
-                            <li> -Blender</li>
-                            <li> -TwinMotions </li>
+                            <li> Quixer Mixer </li>
+                            <li> Blender</li>
+                            <li> TwinMotions </li>
                         </ul>
                     </div>
             </div>   
@@ -160,19 +160,19 @@ contingutPerfils = {
                 <h4 style="margin-left:.5em;text-align:left"> <span class="demi">Skills</span> </h4>
                         <div class="targetes">
                             <ul style="margin-left:2em; margin-right:2em">
-                                <li> -Photoshop </li>
-                                <li> -Illustrator </li>
-                                <li> -InDesign </li>
+                                <li> Photoshop </li>
+                                <li> Illustrator </li>
+                                <li> InDesign </li>
                             </ul>
                             <ul style="margin-left:2em; margin-right:2em">
-                                <li> -Premiere </li>
-                                <li> -lightroom </li>
-                                <li> -Blender</li>
+                                <li> Premiere </li>
+                                <li> lightroom </li>
+                                <li> Blender</li>
                             </ul>
                             <ul style="margin-left:2em; margin-right:2em">
-                                <li> -Material creation </li>
-                                <li> -After effects</li>
-                                <li> -InDesign </li>
+                                <li> Material creation </li>
+                                <li> After effects</li>
+                                <li> InDesign </li>
                             </ul>
                         </div>
             </div>

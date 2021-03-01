@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300");
+@font-face {    
+	font-family: 'Ginger Regular';    
+	src: url(./SRC/F37_Ginger_Pro/F37GingerPro-Regular.otf);
+}
+@font-face {    
+	font-family: 'Ginger Bold';    
+	src: url(./SRC/F37_Ginger_Pro/F37GingerPro-Bold.otf);
+}
+@font-face {    
+	font-family: 'Ginger Black';    
+	src: url(./SRC/F37_Ginger_Pro/F37GingerPro-Black.otf);
+}@font-face {    
+	font-family: 'Ginger Demi';    
+	src: url(./SRC/F37_Ginger_Pro/F37GingerPro-Demi.otf);
+}
+
 
 /* Base Styles
 ********************************************************************* */
@@ -21,19 +37,8 @@ body {
 	font-size: 1.5em;
 	/* line-height: 1.6; */
 	font-weight: 400;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Ginger Regular';
 	color: #222;
-}
-@font-face {    
-	font-family: 'Ginger Bold';    
-	src: url(./SRC/F37_Ginger_Pro/F37GingerPro-Bold.otf);
-}
-@font-face {    
-	font-family: 'Ginger Black';    
-	src: url(./SRC/F37_Ginger_Pro/F37GingerPro-Black.otf);
-}@font-face {    
-	font-family: 'Ginger Demi';    
-	src: url(./SRC/F37_Ginger_Pro/F37GingerPro-Demi.otf);
 }
 
 
@@ -353,7 +358,7 @@ header {
 }
 #lightbox{
 	z-index: 1;
-	width: 75%;
+	max-width: 75%;
 	height: fit-content;
 	padding: 10px 30px 10px 30px;
 	border: 5px solid rgb(255, 208, 0);
@@ -372,11 +377,18 @@ header {
 }
 .flex{
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap;  */
 	
 	margin: auto;
-	padding-top: 2em;
+	padding-top: 0;
+	
 	justify-content: space-between;
+}
+/* .posLogo{
+	padding: 1em 0 0 1em;
+} */
+.flex>ul{
+	padding: 2em 1em 0 1em;
 }
 .flex>ul>li>a{
 	text-decoration: none;
@@ -540,6 +552,9 @@ header {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+.tamany{
+	width: 300px;
+}
 
 
 .targetes{
@@ -579,6 +594,27 @@ header {
 .Aboutus-cont{
 	width: 50%;
 }
+.rowpetit{
+	display: flex;
+	justify-content: space-between;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.ourteam{
+	max-width: 1024px;
+	margin: auto;
+	
+}
+.profiles{
+	margin-right: .5em;
+	width:  300px;
+	height: fit-content;
+}
+.profiles>a>img{
+	width: 100%;
+}
 
 /* Portfolio Section
 ********************************************************************* */
@@ -598,6 +634,15 @@ header {
 		margin-top: 5em;
 	}
 	@media only screen and (max-width: 1280px){
+		.cartaFlex{
+			display: block;
+		}
+		.titol-card{
+			text-align: center;
+		}
+		.subtitol{
+			text-align: center;
+		}
 		
 		.grid-container{
 			display: flex;
@@ -734,6 +779,7 @@ header {
 		.title h1 {
 			font-size: 80px;
 		}
+		
 	}
 	.title p {
 		max-width: 600px;
@@ -746,6 +792,12 @@ header {
 	@media only screen and (max-width: 766px) {
 		.main_nav {
 			padding-top: 25px;
+		}
+		.posLogo{
+			padding: 1em 0 0 0;
+		}
+		.flex>ul{
+			padding: 0;
 		}
 	}
 	.open-nav {
@@ -762,6 +814,8 @@ header {
 	}
 	.lightbox-cont{
 		display: block;
+		width: fit-content;
+		height: fit-content;
 	}
 	/* .cartaFlex{
 		display: block;
@@ -779,6 +833,21 @@ header {
 	}
 	
 	@media only screen and (max-width: 766px) {
+		.flex{
+			display: block;
+		}
+		.profiles{
+			margin: auto;
+		}
+		.profiles>a>img{
+			width: 100%;
+			
+		}
+		.tamany{
+			width: 50vw;
+			text-align: center;
+			margin: auto;
+		}
 		nav ul {
 			padding-top: 0px;
 			margin-bottom: 22px;
@@ -810,6 +879,9 @@ header {
 		.Aboutus-cont{
 			width: 100%;
 			
+		}
+		.row{
+			display: flex;
 		}
 		
 	}
@@ -856,8 +928,13 @@ header {
 	}
 	
 	@media only screen and (max-width: 766px) {
-		.row{
+		/* .row{
 			display: block;
+			text-align: center;
+		} */
+		.rowpetit{
+			display: block;
+			margin: auto 3em;
 			text-align: center;
 		}
 		.title {
@@ -1130,7 +1207,7 @@ header {
 	
 	
 	/*animated scroll arrow animation*/
-	@-webkit-keyframes fade_move_down {
+	/* @-webkit-keyframes fade_move_down {
 		0% {
 			-webkit-transform:translate(0, -10px) rotate(45deg);
 			opacity: 0;
@@ -1168,7 +1245,7 @@ header {
 			transform:translate(0, 10px) rotate(45deg);
 			opacity: 0;
 		}
-	}
+	} */
 	/* About Section
 	********************************************************************* */
 	
@@ -1180,9 +1257,11 @@ header {
 	/* Team Section
 	********************************************************************* */
 	#team {
+		/* max-width:960px;
+		margin: auto; */
 		padding: 50px 0 100px 0;
-		background-color: #ffffff;
-		color: rgb(0, 0, 0);
+		/* background-color: #ffffff;
+		color: rgb(0, 0, 0); */
 	}
 	#team .icon {
 		font-size: 26px;
@@ -1190,6 +1269,7 @@ header {
 	/* Skills Section
 	********************************************************************* */
 	#skills {
+		margin-top: 1em;
 		padding: 100px 0 100px 0;
 		background-color: #ffdb0d;
 	}
@@ -1395,7 +1475,7 @@ header {
 	
 	.icon {
 		padding-right: 10px;
-		color: #e55d87;
+		color: #e5d75d;
 	}
 	.block {
 		width: 70px;
