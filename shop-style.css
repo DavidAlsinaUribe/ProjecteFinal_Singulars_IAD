@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  background-color: rgb(255, 208, 0);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
   margin: 0;
@@ -48,11 +49,12 @@ h6 {
 
 /* Start */
 .container {
-  padding: 0 10rem;
+  max-width: 80%;
 }
 
 .topnav {
-  background: white;
+  z-index: 2;
+  background: rgb(255, 208, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -111,7 +113,7 @@ h6 {
 }
 
 .banner {
-  background: #f1f1f1;
+  background: rgb(201, 164, 0);
   padding: 5rem;
   margin-top: 8rem;
 }
@@ -129,7 +131,7 @@ h6 {
 }
 
 .banner p {
-  color: grey;
+  color: darkslategrey;
 }
 
 .slide img {
@@ -161,7 +163,7 @@ h6 {
 }
 
 .shop-item--container {
-  background: #f1f1f1;
+  background: rgb(201, 164, 0);
   padding: 2rem;
   flex-grow: 1;
   display: flex;
@@ -328,12 +330,11 @@ h6 {
 /* Download & Delete Buttons CSS */
 .downloadButton {
   margin: 10px auto;
-  padding: 10px 0;
   width: 200px;
 }
 
 .downloadButton a {
-  background: #e25734;
+  background: rgb(170, 139, 0);
   color: #fff;
   display: block;
   font-size: 17px;
@@ -346,6 +347,6 @@ h6 {
   text-transform: uppercase;
   width: 200px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   transition: 350ms;
 }
