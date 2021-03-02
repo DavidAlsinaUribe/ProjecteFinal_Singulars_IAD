@@ -230,7 +230,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>The creative house</b></h3>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p> This render is an image of what we cal The creation house. This house was designed to use as a co-working and also a place to live for at least 8 people. The main idea was to create an space for nomadic creative people. It this interior you can find a co-wordink space, a comon kitchen for everyone and two different types of rooms. The firs one was for people that will live between 6 to 12 months. The second one was for people who would live there between 1 to 6 months. The main idea was to give an space were creative people of differents disciplins could live together so they could create a synergy between al the knowledge of everyone. </p>
             </div> 
         </div>`,
 
