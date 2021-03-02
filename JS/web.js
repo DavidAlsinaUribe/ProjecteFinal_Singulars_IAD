@@ -156,23 +156,22 @@ contingutPerfils = {
                     <h3 style="margin-bottom:0;"> <span class="nom-card">BIMBODOGGY</span> </h3>
                     <h4 class="subtitol"> Pet</h4>
                 </div>
-                <p style="margin: 1em 1em; text-align:left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p style="margin: 1em 1em; text-align:left">This is our pet. You better be kind with him, because if he starts to bark you that will mean that he doesn't like you. If this happens we will be so sorry but we won't be able to make a project with you. Yes, he is kind of an exam that everyone must pass before talking about serious things. If you don't like this we are sorry, but you know... it is what it is</p>
                 <h4 style="margin-left:.5em;text-align:left"> <span class="demi">Skills</span> </h4>
                         <div class="targetes">
                             <ul style="margin-left:2em; margin-right:2em">
-                                <li> Photoshop </li>
-                                <li> Illustrator </li>
-                                <li> InDesign </li>
+                                <li> Eating your food </li>
+                                <li> Barking </li>
+                                <li> Sleeping </li>
                             </ul>
                             <ul style="margin-left:2em; margin-right:2em">
-                                <li> Premiere </li>
-                                <li> lightroom </li>
-                                <li> Blender</li>
+                                <li> Playing </li>
+                                <li> Running </li>
+                                <li> Protection</li>
                             </ul>
                             <ul style="margin-left:2em; margin-right:2em">
-                                <li> Material creation </li>
-                                <li> After effects</li>
-                                <li> InDesign </li>
+                                <li> Funny </li>
+                                
                             </ul>
                         </div>
             </div>
@@ -185,7 +184,7 @@ contingut3d = {
         
             <div>
                 <h3 style="margin-top:.5em"> <b>Nike Shoes</b> </h3>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p style="text-align:left"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
             </div> 
         </div>`,
 
@@ -194,7 +193,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Pokeball</b> </h3>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p style="text-align:left"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
             </div> 
         </div>`,
 
@@ -203,7 +202,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Sunday Funday </b></h3>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p style="text-align:left"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
             </div> 
         </div>`,
 
@@ -212,7 +211,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Escuela Viladomat </b></h3>
-                <p> This render is an image from a Bim project we did last year, the objective was to create an school that was going to be located in Barcelona. More especifically in the Viladomat's street. Once we finished the 3D model we decided to crete some renders from the exterior and the interior of the buildings. This is one of the final pictures we gave to the client. I hope you like it</p>
+                <p style="text-align:left"> This render is an image from a Bim project we did last year, the objective was to create an school that was going to be located in Barcelona. More especifically in the Viladomat's street. Once we finished the 3D model we decided to crete some renders from the exterior and the interior of the buildings. This is one of the final pictures we gave to the client. I hope you like it</p>
             </div> 
         </div>`,
 
@@ -221,7 +220,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Single family home </b></h3>
-                <p> Single family home is an imaginary house that we created, not only to design some renders but to show people how theu could modify the interior of a house so it is more sustainable. This work gives importance to the ecologic design and gives a different point of view to the clients. We give an example in how they shoud start thinking before doing any important change in their buildings and surroundings. We work to create beautiful images that clients can fall in love with, but also we promote conscious design just because we think is the only posible future.  </p>
+                <p style="text-align:left"> Single family home is an imaginary house that we created, not only to design some renders but to show people how theu could modify the interior of a house so it is more sustainable. This work gives importance to the ecologic design and gives a different point of view to the clients. We give an example in how they shoud start thinking before doing any important change in their buildings and surroundings. We work to create beautiful images that clients can fall in love with, but also we promote conscious design just because we think is the only posible future.  </p>
             </div> 
         </div>`,
 
@@ -230,7 +229,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>The creative house</b></h3>
-                <p> This render is an image of what we cal The creation house. This house was designed to use as a co-working and also a place to live for at least 8 people. The main idea was to create an space for nomadic creative people. It this interior you can find a co-wordink space, a comon kitchen for everyone and two different types of rooms. The firs one was for people that will live between 6 to 12 months. The second one was for people who would live there between 1 to 6 months. The main idea was to give an space were creative people of differents disciplins could live together so they could create a synergy between al the knowledge of everyone. </p>
+                <p style="text-align:left"> This render is an image of what we cal The creation house. This house was designed to use as a co-working and also a place to live for at least 8 people. The main idea was to create an space for nomadic creative people. It this interior you can find a co-wordink space, a comon kitchen for everyone and two different types of rooms. The firs one was for people that will live between 6 to 12 months. The second one was for people who would live there between 1 to 6 months. The main idea was to give an space were creative people of differents disciplins could live together so they could create a synergy between al the knowledge of everyone. </p>
             </div> 
         </div>`,
 
@@ -239,7 +238,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Viladomat classroom</b></h3>
-                <p>  This render is an image from a Bim project we did last year, the objective was to create an school that was going to be located in Barcelona. More especifically in the Viladomat's street. Once we finished the 3D model we decided to crete some renders from the exterior and the interior of the buildings. This is one of the final pictures we gave to the client. I hope you like it</p>
+                <p style="text-align:left">  This render is an image from a Bim project we did last year, the objective was to create an school that was going to be located in Barcelona. More especifically in the Viladomat's street. Once we finished the 3D model we decided to crete some renders from the exterior and the interior of the buildings. This is one of the final pictures we gave to the client. I hope you like it</p>
             </div> 
         </div>`,
 
@@ -248,7 +247,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Abstract design</b></h3>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p style="text-align:left"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
             </div> 
         </div>`,
 }
