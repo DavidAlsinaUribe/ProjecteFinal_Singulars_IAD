@@ -212,7 +212,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Escuela Viladomat </b></h3>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p> This render is an image from a Bim project we did last year, the objective was to create an school that was going to be located in Barcelona. More especifically in the Viladomat's street. Once we finished the 3D model we decided to crete some renders from the exterior and the interior of the buildings. This is one of the final pictures we gave to the client. I hope you like it</p>
             </div> 
         </div>`,
 
@@ -221,7 +221,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Single family home </b></h3>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p> Single family home is an imaginary house that we created, not only to design some renders but to show people how theu could modify the interior of a house so it is more sustainable. This work gives importance to the ecologic design and gives a different point of view to the clients. We give an example in how they shoud start thinking before doing any important change in their buildings and surroundings. We work to create beautiful images that clients can fall in love with, but also we promote conscious design just because we think is the only posible future.  </p>
             </div> 
         </div>`,
 
@@ -239,7 +239,7 @@ contingut3d = {
 
             <div>
                 <h3 style="margin-top:.5em"> <b>Viladomat classroom</b></h3>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro odio vero nesciunt voluptates facere nostrum est, voluptate mollitia? Nulla non reiciendis assumenda sapiente natus iure maiores deserunt inventore dignissimos.</p>
+                <p>  This render is an image from a Bim project we did last year, the objective was to create an school that was going to be located in Barcelona. More especifically in the Viladomat's street. Once we finished the 3D model we decided to crete some renders from the exterior and the interior of the buildings. This is one of the final pictures we gave to the client. I hope you like it</p>
             </div> 
         </div>`,
 
@@ -277,6 +277,15 @@ window.addEventListener("click", (e) => {
         blackOverlay.style.display = "none"
     }
 })
+
+
+
+// const toggleButton = document.getElementsByClassName('toggle-button')[0]
+// const navbarLinks = document.getElementsByClassName('navbar')[0]
+
+// toggleButton.addEventListener('click', () => {
+//   navbarLinks.classList.toggle('active')
+// })
 
 
 

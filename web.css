@@ -361,9 +361,9 @@ header {
 	max-width: 75%;
 	height: fit-content;
 	padding: 10px 30px 10px 30px;
-	border: 5px solid rgb(255, 208, 0);
+	border: 5px solid #ffd000;
 	border-radius: 5px;
-	background-color: rgb(255, 208, 0);
+	background-color: #ffd000;
 	margin: 1em auto ;
 	/* box-shadow: 5px 5px rgb(139, 114, 0); */
 	
@@ -378,17 +378,15 @@ header {
 .flex{
 	display: flex;
 	/* flex-wrap: wrap;  */
-	
+	left: 50%;
 	margin: auto;
 	padding-top: 0;
 	
 	justify-content: space-between;
 }
-/* .posLogo{
-	padding: 1em 0 0 1em;
-} */
+
 .flex>ul{
-	padding: 2em 1em 0 1em;
+	padding: 2em 0 0 0;
 }
 .flex>ul>li>a{
 	text-decoration: none;
@@ -400,11 +398,12 @@ header {
 .contact{
 	margin: auto 0;
 	margin-right: 2em;
+	padding-right: .5em;
 }
 .posLogo{
 	position: relative;
 	top: -15px;
-	margin-left: 0;
+	margin-left: 1em;
 }
 .logo{
 	z-index:10000;
@@ -417,6 +416,7 @@ header {
 }
 #logosize{
 	width: 80%;
+
 }
 .legos{
 	position: relative;
@@ -427,9 +427,47 @@ header {
 	
 	
 }
+#logotot{
+	visibility: hidden;
+	max-width: 300px;
+}
 .logo>a{
 	transition: 1s;
 	
+}
+.sitlego{
+	max-width:100%;
+	height: fit-content;
+}
+.main-footer {
+	margin: 7rem 0;
+	padding-top: 5rem;
+	border-top: 1px solid #f1f1f1;
+	display: flex;
+	justify-content: space-between;
+}
+  
+.main-footer > nav ul {
+	padding-left: 0;
+	list-style: none;
+}
+  
+.main-footer > nav ul li {
+	margin-bottom: 1rem;
+}
+  
+.main-footer > nav ul li a {
+	color: grey;
+	font-size: 1.2rem;
+}
+.main-footer > nav ul li a:hover {
+	color: #010101;
+}
+  
+.main-footer h3 {
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 1.3rem;
 }
 .img{
 	width: 400px;
@@ -799,6 +837,10 @@ header {
 		.flex>ul{
 			padding: 0;
 		}
+		.title{
+			text-align: center;
+		}
+		
 	}
 	.open-nav {
 		max-height: 400px !important;
@@ -883,7 +925,16 @@ header {
 		.row{
 			display: flex;
 		}
-		
+		#logosize{
+			display: none;
+		}
+		#legosize{
+			display: none;
+		}
+		#logotot{
+			visibility: visible;
+			max-width: 300px;
+		}
 	}
 	nav ul li {
 		display: inline-block;
@@ -1331,6 +1382,9 @@ header {
 	}
 	.value-90 {
 		width: 90%;
+	}
+	.value-95{
+		width: 95%;
 	}
 	.value-100 {
 		width: 100%;
