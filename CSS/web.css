@@ -361,7 +361,7 @@ header {
 	max-width: 75%;
 	height: fit-content;
 	padding: 10px 30px 10px 30px;
-	border: 5px solid #ffd000;
+	border: 5px solid rgb(255, 208, 0);
 	border-radius: 5px;
 	background-color: #ffd000;
 	margin: 1em auto ;

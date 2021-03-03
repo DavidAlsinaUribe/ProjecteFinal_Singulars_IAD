@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-color: rgb(255, 208, 0);
+  background-color: rgb(255, 255, 255);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
   margin: 0;
@@ -113,7 +113,7 @@ h6 {
 }
 
 .banner {
-  background: rgb(201, 164, 0);
+  background: rgb(255, 255, 255);
   padding: 5rem;
   margin-top: 8rem;
 }
@@ -163,7 +163,7 @@ h6 {
 }
 
 .shop-item--container {
-  background: rgb(201, 164, 0);
+  background: rgb(226, 226, 226);
   padding: 2rem;
   flex-grow: 1;
   display: flex;
@@ -334,8 +334,8 @@ h6 {
 }
 
 .downloadButton a {
-  background: rgb(170, 139, 0);
-  color: #fff;
+  background: rgb(255, 208, 0);
+  color: rgb(0, 0, 0);
   display: block;
   font-size: 17px;
   font-weight: 700;
